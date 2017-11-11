@@ -9,7 +9,7 @@ body {
 .custom-navbar .custom-navbar-brand {
   font-size: 1.4em;
   color: #EEEFED;
-  font-weight: 300;
+  font-weight: 400;
   font-style: italic;
 }
 
@@ -35,7 +35,7 @@ main .btn-custom:hover {
   border-radius: 7px;
   margin: 60px auto;
   max-width: 600px;
-  padding: 40px 25px 30px 30px;
+  padding: 30px 25px 10px 30px;
   position: relative;
 }
 
@@ -45,16 +45,16 @@ main .btn-custom:hover {
   font-weight: 600;
   font-size: 2.5em;
   position: absolute;
-  top: 26px;
+  top: 15px;
   left: 6px;
 }
 
-.custom-bg p {
+.custom-bg .quote-copy {
   color: #41EAD4;
   font-weight: 600;
   font-size: 1.2em;
-  text-indent: 25px;
-  padding-bottom: 15px;
+  text-indent: 15px;
+  margin-bottom: 12px;
 }
 
 .custom-bg #credit-name {
@@ -64,19 +64,17 @@ main .btn-custom:hover {
 }
 
 /*===== MEDIA QUERIES =====*/
-@media (min-width: 400px) {
-  .custom-navbar .custom-navbar-brand {
-    font-size: 1.8em;
-  }
-}
-
 @media (min-width: 450px) {
-  .custom-bg #left-quote {
-    top: 22px;
-    left: 3px;
+  .custom-navbar .custom-navbar-brand {
+    font-size: 1.7em;
   }
-  .custom-bg p {
+  .custom-bg #left-quote {
+    top: 14px;
+    left: 2px;
+  }
+  .custom-bg .quote-copy {
     font-size: 1.5em;
+    text-indent: 25px;
   }
   .custom-bg #credit-name {
     font-size: 1.3em;
@@ -89,7 +87,7 @@ main .btn-custom:hover {
     padding: 10px 0 15px 15px;
   }
   .custom-navbar .custom-navbar-brand {
-    font-size: 2.6em;
+    font-size: 2.8em;
   }
   main .btn-custom {
     font-size: 1.925em;
@@ -97,20 +95,14 @@ main .btn-custom:hover {
   }
   .custom-bg #left-quote {
     font-size: 3em;
-    top: 15px;
-    left: 2px;
+    top: 7px;
   }
-  .custom-bg p {
+  .custom-bg .quote-copy {
     font-size: 1.7em;
     padding-left: 10px;
   }
   .custom-bg #credit-name {
     font-size: 1.5em;
-  }
-}
-
-@media (min-width: 900px) {
-  .custom-navbar .custom-navbar-brand {
-    font-size: 2.8em;
+    padding-top: 10px;
   }
 }
