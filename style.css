@@ -54,6 +54,12 @@ main .btn-custom:hover {
   font-weight: 600;
   font-size: 1.2em;
   text-indent: 25px;
+  padding-bottom: 15px;
+}
+
+.custom-bg #credit-name {
+  color: #41EAD4;
+  font-size: 1em;
 }
 
 /*===== MEDIA QUERIES =====*/
@@ -70,6 +76,10 @@ main .btn-custom:hover {
   }
   .custom-bg p {
     font-size: 1.5em;
+  }
+  .custom-bg #credit-name {
+    font-size: 1.3em;
+    text-align: right;
   }
 }
 
@@ -92,6 +102,9 @@ main .btn-custom:hover {
   .custom-bg p {
     font-size: 1.7em;
     padding-left: 10px;
+  }
+  .custom-bg #credit-name {
+    font-size: 1.5em;
   }
 }
 
