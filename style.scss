@@ -1,0 +1,69 @@
+$randomQuoteBlue: #011627;
+$randomQuoteGreen: #41EAD4;
+$randomQuoteGray: #EEEFED;
+$montserrat: "Montserrat", sans-serif;
+
+body {
+  font-family: $montserrat;
+}
+
+.custom-navbar {
+  background: $randomQuoteBlue;
+  // padding-bottom: 20px;
+  .custom-navbar-brand {
+    font-size: 1.4em;
+    color: $randomQuoteGray;
+    font-weight: 300;
+    font-style: italic;
+    // text-align: center;
+  }
+}
+
+main {
+  .btn-custom {
+    margin-top: 30px;
+    background: $randomQuoteBlue;
+    color: $randomQuoteGreen;
+    font-weight: 600;
+    padding: 10px 35px;
+    border-radius: 7px;
+    font-size: 1.3em;
+    transition: 0.3s ease-in-out;
+  }
+
+  .btn-custom:hover {
+    opacity: 0.85;
+    color: $randomQuoteGreen;
+    background: $randomQuoteBlue;
+  }
+}
+/*===== MEDIA QUERIES =====*/
+@media(min-width: 400px) {
+  .custom-navbar {
+    .custom-navbar-brand {
+      font-size: 1.8em;
+    }
+  }
+}
+@media(min-width: 600px) {
+  .custom-navbar {
+    padding: 10px 0 15px 15px;
+
+    .custom-navbar-brand {
+      font-size: 2.6em;
+      // text-align: left;
+    }
+  }
+
+  main .btn-custom {
+    font-size: 1.925em;
+    margin-top: 50px;
+  }
+}
+@media(min-width: 900px) {
+  .custom-navbar {
+    .custom-navbar-brand {
+      font-size: 2.8em;
+    }
+  }
+}
