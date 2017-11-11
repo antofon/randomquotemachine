@@ -30,6 +30,32 @@ main .btn-custom:hover {
   background: #011627;
 }
 
+.custom-bg {
+  background: #011627;
+  border-radius: 7px;
+  margin: 60px auto;
+  max-width: 600px;
+  padding: 30px 30px 40px;
+  position: relative;
+}
+
+.custom-bg #left-quote {
+  font-family: "Montserrat", sans-serif;
+  color: #41EAD4;
+  font-weight: 600;
+  font-size: 1.2em;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.custom-bg p {
+  color: #41EAD4;
+  font-weight: 600;
+  font-size: 1.2em;
+  text-indent: 25px;
+}
+
 /*===== MEDIA QUERIES =====*/
 @media (min-width: 400px) {
   .custom-navbar .custom-navbar-brand {
@@ -47,6 +73,13 @@ main .btn-custom:hover {
   main .btn-custom {
     font-size: 1.925em;
     margin-top: 50px;
+  }
+  .custom-bg #left-quote {
+    font-size: 3em;
+  }
+  .custom-bg p {
+    font-size: 1.7em;
+    padding-left: 10px;
   }
 }
 

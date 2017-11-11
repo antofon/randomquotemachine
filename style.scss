@@ -37,6 +37,32 @@ main {
     background: $randomQuoteBlue;
   }
 }
+
+.custom-bg {
+  background: $randomQuoteBlue;
+  border-radius: 7px;
+  margin: 60px auto;
+  max-width: 600px;
+  padding: 30px 30px 40px;
+  position: relative;
+
+  #left-quote {
+    font-family: $montserrat;
+    color: $randomQuoteGreen;
+    font-weight: 600;
+    font-size: 1.2em;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  p {
+    color: $randomQuoteGreen;
+    font-weight: 600;
+    font-size: 1.2em;
+    text-indent: 25px;
+  }
+}
 /*===== MEDIA QUERIES =====*/
 @media(min-width: 400px) {
   .custom-navbar {
@@ -58,6 +84,17 @@ main {
   main .btn-custom {
     font-size: 1.925em;
     margin-top: 50px;
+  }
+
+  .custom-bg {
+    #left-quote {
+      font-size: 3em;
+    }
+
+    p {
+      font-size: 1.7em;
+      padding-left: 10px;
+    }
   }
 }
 @media(min-width: 900px) {
