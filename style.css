@@ -60,6 +60,7 @@ main .btn-custom:hover {
 .custom-bg #credit-name {
   color: #41EAD4;
   font-size: 1em;
+  text-transform: uppercase;
 }
 
 /*===== MEDIA QUERIES =====*/
