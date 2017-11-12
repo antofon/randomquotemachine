@@ -55,7 +55,7 @@ main {
     left: 6px;
   }
 
-  .quote-copy {
+  #quote {
     color: $randomQuoteGreen;
     font-weight: 600;
     font-size: 1.2em;
@@ -83,7 +83,7 @@ main {
       left: 2px;
     }
 
-    .quote-copy {
+    #quote {
       font-size: 1.5em;
       text-indent: 25px;
     }
@@ -116,7 +116,7 @@ main {
       top: 7px;
     }
 
-    .quote-copy {
+    #quote {
       font-size: 1.7em;
       padding-left: 10px;
     }

@@ -49,7 +49,7 @@ main .btn-custom:hover {
   left: 6px;
 }
 
-.custom-bg .quote-copy {
+.custom-bg #quote {
   color: #41EAD4;
   font-weight: 600;
   font-size: 1.2em;
@@ -72,7 +72,7 @@ main .btn-custom:hover {
     top: 14px;
     left: 2px;
   }
-  .custom-bg .quote-copy {
+  .custom-bg #quote {
     font-size: 1.5em;
     text-indent: 25px;
   }
@@ -97,7 +97,7 @@ main .btn-custom:hover {
     font-size: 3em;
     top: 7px;
   }
-  .custom-bg .quote-copy {
+  .custom-bg #quote {
     font-size: 1.7em;
     padding-left: 10px;
   }
