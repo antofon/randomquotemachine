@@ -49,7 +49,7 @@ main .btn-custom:hover {
   left: 6px;
 }
 
-.custom-bg #quote {
+.custom-bg #quote-text {
   color: #41EAD4;
   font-weight: 600;
   font-size: 1.2em;
@@ -57,7 +57,7 @@ main .btn-custom:hover {
   margin-bottom: 12px;
 }
 
-.custom-bg #credit-name {
+.custom-bg #quote-author {
   color: #41EAD4;
   font-size: 1em;
   text-transform: uppercase;
@@ -72,11 +72,11 @@ main .btn-custom:hover {
     top: 14px;
     left: 2px;
   }
-  .custom-bg #quote {
+  .custom-bg #quote-text {
     font-size: 1.5em;
     text-indent: 25px;
   }
-  .custom-bg #credit-name {
+  .custom-bg #quote-author {
     font-size: 1.3em;
     text-align: right;
   }
@@ -97,11 +97,11 @@ main .btn-custom:hover {
     font-size: 3em;
     top: 7px;
   }
-  .custom-bg #quote {
+  .custom-bg #quote-text {
     font-size: 1.7em;
     padding-left: 10px;
   }
-  .custom-bg #credit-name {
+  .custom-bg #quote-author {
     font-size: 1.5em;
     padding-top: 10px;
   }

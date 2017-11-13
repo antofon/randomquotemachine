@@ -55,7 +55,7 @@ main {
     left: 6px;
   }
 
-  #quote {
+  #quote-text {
     color: $randomQuoteGreen;
     font-weight: 600;
     font-size: 1.2em;
@@ -63,7 +63,7 @@ main {
     margin-bottom: 12px;
   }
 
-  #credit-name {
+  #quote-author {
     color: $randomQuoteGreen;
     font-size: 1em;
     text-transform: uppercase;
@@ -83,12 +83,12 @@ main {
       left: 2px;
     }
 
-    #quote {
+    #quote-text {
       font-size: 1.5em;
       text-indent: 25px;
     }
 
-    #credit-name {
+    #quote-author {
       font-size: 1.3em;
       text-align: right;
     }
@@ -116,12 +116,12 @@ main {
       top: 7px;
     }
 
-    #quote {
+    #quote-text {
       font-size: 1.7em;
       padding-left: 10px;
     }
 
-    #credit-name {
+    #quote-author {
       font-size: 1.5em;
       padding-top: 10px;
     }
