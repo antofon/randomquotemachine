@@ -7,20 +7,105 @@ $(document).ready(function() {
 //  $("#quote-text").text(response.quoteText);
 //   $("#quote-author").text(response.quoteAuthor);
 // };
-function parseQuote(response)
-    {
-      document.getElementById("quote-text").innerHTML = response.quoteText;
-      document.getElementById("quote-author").innerHTML = response.quoteAuthor;
-    }
+// var tag = document.createElement("script");
+// tag.src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&callback=parseQuote&lang=en";
+// document.getElementsByTagName("head")[0].appendChild(tag);
+var quoteHTML;
+var forismaticAPI;
+var quoteCopy;
+var quoteOptions;
 
-$("#getQuote").on("click", function(){
 
-
-  var tag = document.createElement("script");
-  tag.src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&callback=parseQuote&lang=en";
-  document.getElementsByTagName("head")[0].appendChild(tag);
-
+$("#getQuote").click(function(){
+$.get("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsoncallback=?&lang=en").done(function(response) {
+  console.log(response);
+})
+// $.ajax({
+//   url : 'http://api.forismatic.com/api/1.0/?method=getQuote&format=son',
+//   type : 'GET',
+//   dataType : 'json',
+//
+// })
+// .done(function() {
+//   console.log("success");
+// })
+// .fail(function() {
+//   console.log("error");
+// })
+// .always(function() {
+//   console.log("complete");
+// });
 });
+//     forismaticAPI = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en";
+//   // quoteCopy = $(this).text();
+// //   quoteOptions = {
+// //     method: "getQuote",
+// //   format : "json",
+// //   jsonp : "displayQuote",
+// //
+// // };
+//
+//
+// function displayQuote(response) {
+//   $("#quote-text").innerHTML = response.quoteText;
+//     $("#quote-author").innerHTML = response.quoteAuthor;
+//   };
+//
+//   $.getJSON(forismaticAPI, displayQuote);
+//
+// });
+//   function displayQuote(response) {
+//
+//       quoteHTML = "<p class='text-left' id='quote-text'>";
+//       $.each(response.quoteText, function(index, quote) {
+//         quoteHTML += "<span id='left-quote'>&ldquo;</span>"
+//         quoteHTML += quote.quoteLink;
+//       });
+//
+//         // $("#quote-text").text(response.quoteText);
+//         // $("#quote-author").text(response.quoteAuthor);
+//   }
+// quoteHTML += "</p>";
+//   $.getJSON(forismaticAPI, quoteOptions, displayQuote);
+  // var quoteOptions = {
+  //
+  //       format: "json"
+  // };
+
+
+
+
+
+
+//helpful code for API
+// $(document).ready(function () {
+//   $('button').click(function() {
+//     $("button").removeClass("selected");
+//     $(this).addClass("selected");
+//     var flickerAPI = "http://api.flickr.com/services/feeds/photos_public.gne?jsoncallback=?";
+//     var animal = $(this).text();
+//     var flickrOptions = {
+//       tags: animal,
+//       format: "json"
+//     };
+//
+//     function displayPhotos(data) {
+//       var photoHTML = '<ul>';
+//       $.each(data.items, function(i, photo) {
+//         photoHTML += '<li class="grid-25 tablet-grid-50">';
+//         photoHTML += '<a href="' + photo.link + '" class="image">';
+//         photoHTML += ' <img src="' + photo.media.m + '"></a></li>';
+//
+//       });
+//       photoHTML += '</ul>';
+//       $('#photos').html(photoHTML);
+//     }
+//     $.getJSON(flickerAPI, flickrOptions, displayPhotos);
+//
+//   });
+//
+//  });//end ready
+
 
   // $.ajax({
   //   url: 'http://api.forismatic.com/api/1.0/?getQuote&key=457653&format=jsonp&jsonp=parseQuote&lang=en',
