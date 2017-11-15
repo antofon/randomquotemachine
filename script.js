@@ -3,11 +3,11 @@ $(document).ready(function() {
   "use strict";
 
 
-  $.ajax({url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en', type: 'GET', dataType: 'jsonp'})
+  $.ajax({url: 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en', type: 'GET', dataType: 'jsonp'})
 
 
   $("#getQuote").click(function() {
     //perform AJAX request, configure by passing through key-value pairs
-    $.ajax({url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en', type: 'GET', dataType: 'jsonp'})
+    $.ajax({url: 'https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en', type: 'GET', dataType: 'jsonp'})
   });
 });
