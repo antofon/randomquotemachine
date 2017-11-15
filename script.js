@@ -2,6 +2,7 @@ $(document).ready(function() {
   console.log("JavaScript loaded.");
   "use strict";
 
+
 //   function parseQuote(response) {
 //  console.log(response);
 //  $("#quote-text").text(response.quoteText);
@@ -10,42 +11,64 @@ $(document).ready(function() {
 // var tag = document.createElement("script");
 // tag.src="http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&callback=parseQuote&lang=en";
 // document.getElementsByTagName("head")[0].appendChild(tag);
-var quoteHTML;
-var forismaticAPI;
-var quoteCopy;
-var quoteOptions;
+// var quoteHTML;
+// var forismaticAPI;
+// var quoteCopy;
+// var quoteOptions;
 
+// application/javascript
+// $("#getQuote").click(function () {
+  // var forismaticAPI = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en";
+  // // function displayQuote(response) {
+  // //     console.log(response.quoteText);
+  // // }
+  // // $.$.getJSON('/path/to/file', {param1: 'value1'}, function(json, textStatus) {
+  // //     /*optional stuff to do after success */
+  // // });
+  // $.getJSON(forismaticAPI, function displayQuote (response){
+  //   JSON.parse(response);
+  //   alert(response);
+  // });
 
-$("#getQuote").click(function(){
-$.get("http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsoncallback=?&lang=en").done(function(response) {
-  console.log(response);
-})
-// $.ajax({
-//   url : 'http://api.forismatic.com/api/1.0/?method=getQuote&format=son',
-//   type : 'GET',
-//   dataType : 'json',
-//
-// })
-// .done(function() {
-//   console.log("success");
-// })
-// .fail(function() {
-//   console.log("error");
-// })
-// .always(function() {
-//   console.log("complete");
-// });
+  $("#getQuote").click(function () {
+  $.ajax({
+    url: 'http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en',
+    type: 'GET',
+    dataType: 'jsonp',
+    // data: {param1: 'value1'}
+  })
 });
-//     forismaticAPI = "http://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en";
-//   // quoteCopy = $(this).text();
-// //   quoteOptions = {
-// //     method: "getQuote",
-// //   format : "json",
-// //   jsonp : "displayQuote",
-// //
-// // };
+
+
+
+//});
+
+// var xhr = new XMLHttpRequest();
+// var url = "https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&jsonp=displayQuote&lang=en";
 //
+// xhr.open('GET', url, true);
+// // xhr.setRequestHeader("Access-Control-Allow-Origin", "http://127.0.0.1:3000/");
+// xhr.setRequestHeader("content-type", "application/json");
 //
+// xhr.onreadystatechange = function () {
+//   if (xhr.readyState === 4 && xhr.status === 200){
+//     var jsonContent = JSON.parse(xhr.responseText);
+//     console.log(jsonContent);
+// //     document.getElementById("getQuote").click(function(){
+// // displayQuote();
+// //     });
+//   }
+//
+//   // function displayQuote () {
+//   //
+//   //
+//   // }
+// }
+//
+// xhr.send();
+
+
+
 // function displayQuote(response) {
 //   $("#quote-text").innerHTML = response.quoteText;
 //     $("#quote-author").innerHTML = response.quoteAuthor;
