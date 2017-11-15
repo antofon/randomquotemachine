@@ -17,10 +17,9 @@
     <!-- Bootstrap, version 3.3.7: Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <!-- Custom JS -->
+    <!-- Necessary for AJAX call to work. Must be defined first before request sent to server. -->
     <script type="text/javascript">
         function displayQuote(response) {
-            console.log(response.quoteText);
-            console.log(response.quoteAuthor);
             document.getElementById('quote-text').innerHTML = '<span id="left-quote">&ldquo;</span>' + response.quoteText;
 
             document.getElementById('quote-author').innerHTML = '&ndash;' +
@@ -51,7 +50,8 @@
                 <a role="button" class="btn btn-large btn-custom " id="getQuote">New Quote</a></p>
             <div class="custom-bg">
 
-                <p class="text-left" id="quote-text"><span id="left-quote">&ldquo;</span>Press the &ldquo;New Quote&rdquo; button to see some awesome quotes.</p>
+                <p class="text-left" id="quote-text"><span id="left-quote">&ldquo;</span>Press the &ldquo;New Quote&rdquo; button to see some awesome quotes. After the button is pressed, you may have to click the &ldquo;Shield&rdquo; icon in your search bar to enable your browser to access
+                    the quotes.</p>
                 <p class="text-right" id="quote-author">&ndash;R.D.G.</p>
             </div>
         </main>
