@@ -65,14 +65,15 @@ main .btn-custom:hover {
 
 .custom-bg #tweet {
   color: #41EAD4;
+  transition: 0.3s ease-in-out;
+}
+
+.custom-bg #tweet:hover {
+  opacity: 0.75;
 }
 
 .custom-bg .custom-size {
   font-size: 2.5em;
-}
-
-.custom-bg .custom-size:hover {
-  opacity: 0.75;
 }
 
 /*===== MEDIA QUERIES =====*/
