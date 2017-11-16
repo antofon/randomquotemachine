@@ -20,8 +20,17 @@
     <!-- Necessary for AJAX call to work. Must be defined first before request sent to server. -->
     <script type="text/javascript">
         function displayQuote(response) {
-            document.getElementById('quote-text').innerHTML = '<span id="left-quote">&ldquo;</span>' + response.quoteText;
+            //create variable that holds url query string when the Twitter button is pressed.
+            var quoteText = '' + 'https://twitter.com/intent/tweet?hashtags=randomquote&text=%22' + response.quoteText + "%22" + " " + "-" + response.quoteAuthor;
 
+            //target attributes for <a> element and give it these values
+            //allows new tab to open to Tweet out the quote
+            $("#tweet").click(function() {
+                $("#tweet").attr('href', quoteText);
+                $("#tweet").attr('target', '_blank');
+            });
+
+            document.getElementById('quote-text').innerHTML = '<span id="left-quote">&ldquo;</span>' + response.quoteText;
             document.getElementById('quote-author').innerHTML = '&ndash;' +
                 response.quoteAuthor;
         }
@@ -53,7 +62,7 @@
                 <!--Instructions from quote body: Press the &ldquo;New Quote&rdquo; button to see some awesome quotes. After the button is pressed, you may have to click the &ldquo;Shield&rdquo; icon in your search bar to enable your browser to access
                   the quotes. -->
                 <p class="text-left" id="quote-text"><span id="left-quote">&ldquo;</span></p>
-                <p class="text-right" id="quote-author">&ndash;R.D.G.</p>
+                <p class="text-right" id="quote-author">&ndash;</p>
                 <a href="" id="tweet"><i class="fa fa-twitter-square custom-size" aria-hidden="true"></i></a>
             </div>
 
